@@ -1,0 +1,42 @@
+anoter line of code
+
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Login Page</h2>
+  
+  <form id="loginForm" onsubmit="login(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+    
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+    function login(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the entered username and password
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Perform validation and login logic
+      if (username === "your_username" && password === "your_password") {
+        alert("Login successful!");
+        // Perform any necessary actions after successful login
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
+
+In this script, the user is prompted to enter their username and password in an HTML form. When the form is submitted, the login function is triggered. The function retrieves the entered values and performs a simple validation check. If the username and password match the expected values, an alert is displayed indicating a successful login. Otherwise, an alert is shown for an invalid login.
+
+Please note that this script is intended for demonstration purposes and should not be used in a production environment. For a secure and robust user authentication system, it is recommended to use server-side technologies and follow industry best practices for authentication and security.
